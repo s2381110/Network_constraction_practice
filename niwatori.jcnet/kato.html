@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カートの中身</title>
+    <style>
+        .checkout-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 0;  /* 角を丸くしない */
+        }
+        .product-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+        }
+        .product-img {
+            max-width: 100px; /* 画像の最大幅を設定 */
+            max-height: 100px; /* 画像の最大高さを設定 */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>カートの中身</h1>
+    <table border="1">
+        <tr>
+            <th>商品</th>
+            <th>価格</th>
+            <th>数量</th>
+            <th>小計</th>
+        </tr>
+        {% for item in cart_items %}
+        <tr>
+            <td>
+                <a href="{{ url_for('product_detail', product_id=item.product.id) }}" class="product-link">
+                    <img src="{{ url_for('static', filename='images/' + item.product.image_path) }}" alt="{{ item.product.name }}" class="product-img">
+                    {{ item.product.name }}
+                </a>
+            </td>
+            <td>{{ item.product.price }}円</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.total_price }}円</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>合計金額: {{ total_price }}円</p>
+    <a href="{{ url_for('checkout') }}" class="checkout-button">注文手続きに進む</a>
+</body>
+</html>
