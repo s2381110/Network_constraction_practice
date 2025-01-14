@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: kanrityumon.php');
                 exit;
             } else {
-                $error = 'ユーザー名またはパスワードが間違っています。';
+                $error_message = 'ユーザー名またはパスワードが間違っています。';
                 header('Location: index.php?error=' . $error_message); 
                 exit;
             }
