@@ -7,6 +7,7 @@
   <style>
     .error {
       color: red;
+      margin-bottom: 10px; 
     }
   </style>
 </head>
@@ -16,10 +17,11 @@
     </header>
     <main>
       <?php
-        if (isset($_GET['error'])) {
-          $error_message = htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8');
+        session_start(); // セッションを開始
+        if (isset($_SESSION['login_error'])) {
+          $error_message = htmlspecialchars($_SESSION['login_error'], ENT_QUOTES, 'UTF-8');
           echo "<p class='error'>{$error_message}</p>";
-          unset($_SESSION['error']);
+          unset($_SESSION['login_error']); // エラーメッセージを表示したらセッション変数を削除
         }
       ?>
       <form action="login.php" method="post">
