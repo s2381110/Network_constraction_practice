@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             } else {
                 $_SESSION['error'] = 'ユーザー名またはパスワードが間違っています。';
-                header('Location: index.php?error='); 
+                echo "<script>alert('{$error_message}'); window.location.href = 'index.html';</script>";
                 exit;
             }
         } catch (PDOException $e) {
