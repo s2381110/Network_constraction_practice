@@ -54,10 +54,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php if (isset($error)): ?>
     <p><?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></p>
   <?php endif; ?>
-  <form action="login.php" method="post">
-    <input type="text" name="username" placeholder="ユーザー名">
-    <input type="password" name="password" placeholder="パスワード">
-    <button type="submit">ログイン</button>
-  </form>
 </body>
 </html>
