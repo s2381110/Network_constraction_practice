@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: kanrityumon.php');
                 exit;
             } else {
-                $error_message = 'ユーザー名またはパスワードが間違っています。';
-                header('Location: index.php?error=' . $error_message); 
+                $_SESSION['error'] = 'ユーザー名またはパスワードが間違っています。';
+                header('Location: index.php?error='); 
                 exit;
             }
         } catch (PDOException $e) {

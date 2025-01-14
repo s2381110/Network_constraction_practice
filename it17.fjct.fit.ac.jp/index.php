@@ -19,6 +19,7 @@
         if (isset($_GET['error'])) {
           $error_message = htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8');
           echo "<p class='error'>{$error_message}</p>";
+          unset($_SESSION['error']);
         }
       ?>
       <form action="login.php" method="post">
