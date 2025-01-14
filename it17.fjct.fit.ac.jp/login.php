@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['user_id'] = $user['id'];
-                header('Location: kanrityumon.html');
+                header('Location: kanrityumon.php');
                 exit;
             } else {
                 $error = 'ユーザー名またはパスワードが間違っています。';
