@@ -1,43 +1,42 @@
-<?php
-// admin.php
-
-require_once 'db_connect.php';
-
-// データベースからデータを取得する処理などを記述
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>管理画面</title>
-  <link rel="stylesheet" href="admin_style.css"> 
+  <link rel="stylesheet" href="admin_style.css">
 </head>
 <body>
 
-<div id="container"> 
+<div id="container">
 
-  <h1>管理画面</h1>
+  <nav id="nav"> 
+    <ul id="menu">
+      <li><a href="product_admin.php">商品管理</a></li>
+      <li><a href="order_list.php">注文管理</a></li>
+      <li><a href="user_list.php">ユーザー管理</a></li>
+    </ul>
+  </nav>
 
-  <p>ようこそ、管理者さん</p>
+  <div id="content"> 
+    <h1>管理画面</h1>
+    <p>ようこそ、管理者さん</p>
 
-  <h2>ダッシュボード</h2>
+    <h2>ダッシュボード</h2>
+    <ul>
+      <li>受注数: </li>
+      <li>売上: </li>
+      <li>ユーザー数: </li>
+    </ul>
+  </div>
 
-  <ul>
-    <li>受注数: </li> 
-    <li>売上: </li> 
-    <li>ユーザー数: </li> 
-  </ul>
+  <div id="hamburger"> 
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-  <h2>管理メニュー</h2>
+</div>
 
-  <ul>
-    <li><a href="product_admin.php">商品管理</a></li> 
-    <li><a href="order_list.php">注文管理</a></li> 
-    <li><a href="user_list.php">ユーザー管理</a></li> 
-  </ul>
-
-</div> 
+<script src="admin_script.js"></script> 
 
 </body>
 </html>
