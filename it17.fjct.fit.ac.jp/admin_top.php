@@ -32,7 +32,7 @@ require_once 'db_connect.php';
   <h2>管理メニュー</h2>
 
   <ul>
-    <li><a href="product_admin.php">商品管理</a></li> 
+    <li><a href="product_admin".php>商品管理</a></li> 
     <li><a href="order_list.php">注文管理</a></li> 
     <li><a href="user_list.php">ユーザー管理</a></li> 
   </ul>
