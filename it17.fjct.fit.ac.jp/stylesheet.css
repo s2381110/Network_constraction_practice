@@ -41,6 +41,12 @@ body {
     background-color: #0069d9;
   }
   
+  /* フォームのスタイル */
+input[type="text"],
+input[type="password"] {
+  /* 既存のスタイル */
+  padding-right: 20px; /* 右側に20pxの余白を追加 */
+}
   /* レスポンシブデザイン */
   @media (max-width: 400px) {
     #container {
