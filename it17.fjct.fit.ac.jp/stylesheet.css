@@ -48,14 +48,8 @@ input[type="password"] {
   padding-right: 20px; /* 右側に20pxの余白を追加 */
 }
 
-label, input[type=\"text\"], input[type=\"password\"] {
-  display: inline-block;
-  vertical-align: middle; /* 垂直方向の中央揃え */
-}
-
-label {
-  width: 100px; /* ラベルの幅を固定 */
-  margin-right: 10px; /* ラベルと入力欄の間に余白 */
+input[type="text"], input[type="password"] {
+  padding-left: 20px; /* 左側に20pxの余白を追加 */
 }
   /* レスポンシブデザイン */
   @media (max-width: 400px) {
