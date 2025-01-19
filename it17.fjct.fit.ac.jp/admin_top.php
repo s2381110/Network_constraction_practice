@@ -1,3 +1,10 @@
+<?php
+// admin_top.php
+
+require_once 'db_connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +20,7 @@
       <li><a href="product_admin.php">商品管理</a></li>
       <li><a href="order_list.php">注文管理</a></li>
       <li><a href="user_list.php">ユーザー管理</a></li>
+      <li><a href="#">設定</a></li> 
     </ul>
   </nav>
 
@@ -26,17 +34,9 @@
       <li>売上: </li>
       <li>ユーザー数: </li>
     </ul>
+
+    </div>
   </div>
-
-  <div id="hamburger"> 
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-</div>
-
-<script src="admin_script.js"></script> 
 
 </body>
 </html>
