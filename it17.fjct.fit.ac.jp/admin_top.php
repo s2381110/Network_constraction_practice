@@ -15,16 +15,16 @@ require_once 'db_connect.php';
 
 <div id="container">
 
-  <nav id="nav"> 
+  <nav id="nav">
     <ul id="menu">
       <li><a href="product_admin.php">商品管理</a></li>
       <li><a href="order_list.php">注文管理</a></li>
       <li><a href="user_list.php">ユーザー管理</a></li>
-      <li><a href="#">設定</a></li> 
+      <li><a href="#">設定</a></li>
     </ul>
   </nav>
 
-  <div id="content"> 
+  <div id="content">
     <h1>管理画面</h1>
     <p>ようこそ、管理者さん</p>
 
@@ -35,8 +35,9 @@ require_once 'db_connect.php';
       <li>ユーザー数: </li>
     </ul>
 
-    </div>
   </div>
+
+</div>
 
 </body>
 </html>
