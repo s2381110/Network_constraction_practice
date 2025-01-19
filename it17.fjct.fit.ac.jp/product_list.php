@@ -18,6 +18,7 @@ try {
 <html>
 <head>
     <title>商品一覧</title>
+    <link rel="stylesheet" href="admin_style.css">
 </head>
 <body>
 
