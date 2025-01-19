@@ -13,14 +13,11 @@ body {
 
 /* サイドバーのスタイル */
 #sidebar {
-  width: 250px;
+  width: 250px; /* サイドバーの幅 */
   background-color: #fff;
   padding: 20px;
-  height: 100vh; 
-  overflow-y: auto;
-  position: fixed; /* サイドバーを固定 */
-　left: 0; /* サイドバーを左側に配置 */
-　top: 0; /* サイドバーを上部に配置 */ 
+  height: 100vh; /* サイドバーの高さをviewportの高さに */
+  overflow-y: auto; /* 縦方向にスクロールできるようにする */
 }
 
 h1 {
