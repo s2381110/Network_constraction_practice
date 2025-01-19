@@ -107,6 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>商品編集</title>
+    <link rel="stylesheet" href="admin_style.css">
 </head>
 <body>
 
