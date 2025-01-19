@@ -17,7 +17,10 @@ body {
   background-color: #fff;
   padding: 20px;
   height: 100vh; 
-  overflow-y: auto; 
+  overflow-y: auto;
+  position: fixed; /* サイドバーを固定 */
+　left: 0; /* サイドバーを左側に配置 */
+　top: 0; /* サイドバーを上部に配置 */ 
 }
 
 h1 {
@@ -112,11 +115,16 @@ a:hover {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-  #hamburger {
-    display: block; 
+  #sidebar {
+    display: none; /* 画面幅が 768px 以下の場合はサイドバーを非表示 */
+  }
+  
+  #content {
+    margin-left: 0; /* 画面幅が 768px 以下の場合はコンテンツの左マージンを 0 に */
   }
 
   #content {
     margin-left: 0; 
+    margin-left: 260px; /* サイドバーの幅 + 余白 */
   }
 }

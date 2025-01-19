@@ -24,7 +24,7 @@ require_once 'db_connect.php';
     </ul>
   </nav>
 
-  <div id="content">
+  <aside id="sidebar">
     <h1>管理画面</h1>
     <p>ようこそ、管理者さん</p>
 
