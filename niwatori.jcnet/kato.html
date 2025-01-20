@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カートの中身</title>
+    <style>
+        .checkout-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 0;  /* 角を丸くしない */
+        }
+        .product-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+        }
+        .product-img {
+            max-width: 100px; /* 画像の最大幅を設定 */
+            max-height: 100px; /* 画像の最大高さを設定 */
+            vertical-align: middle;
+        }
+        .store-name {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            text-align: center;
+            color: #A52A2A;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .store-logo {
+            max-height: 80px; /* ロゴの高さを調整してください */
+            margin-right: 10px; /* テキストとの間隔 */
+        }
+        /* 新しいスタイル */
+        .home-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+<a href="syouhinitiran.html" class="home-link">
+    <h1 class="store-name">
+        <img src="path/to/logo.png" alt="にわとり文具" class="store-logo">
+    </h1>
+    <h1>カートの中身</h1>
+    <table border="1">
+        <tr>
+            <th>商品</th>
+            <th>価格</th>
+            <th>数量</th>
+            <th>小計</th>
+        </tr>
+        {% for item in cart_items %}
+        <tr>
+            <td>
+                <a href="{{ url_for('product_detail', product_id=item.product.id) }}" class="product-link">
+                    <img src="{{ url_for('static', filename='images/' + item.product.image_path) }}" alt="{{ item.product.name }}" class="product-img">
+                    {{ item.product.name }}
+                </a>
+            </td>
+            <td>{{ item.product.price }}円</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.total_price }}円</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>合計金額: {{ total_price }}円</p>
+    <a href="tyumontetuduki.html" class="checkout-button">注文手続きに進む</a>
+</body>
+</html>
