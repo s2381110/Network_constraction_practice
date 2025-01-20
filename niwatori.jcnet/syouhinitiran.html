@@ -29,9 +29,36 @@
             max-width: 100%;
             height: auto;
         }
+                .store-name {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            text-align: center;
+            color: #A52A2A;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .store-logo {
+            max-height: 80px; /* ロゴの高さを調整してください */
+            margin-right: 10px; /* テキストとの間隔 */
+        }
+        /* 新しいスタイル */
+        .home-link {
+            text-decoration: none;
+            color: inherit;
+        }
     </style>
 </head>
 <body>
+<a href="{{ url_for('home') }}" class="home-link">
+    <h1 class="store-name">
+        <img src="path/to/logo.png" alt="にわとり文具" class="store-logo">
+    </h1>
+        </h1>
+        </h1>
+      </a>
     <div class="nav-buttons">
         <a href="kato.html">カートの中身</a>
         <a href="{{ url_for('order_history') }}">注文履歴</a>
