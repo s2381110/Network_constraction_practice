@@ -1,3 +1,19 @@
+<?php
+// syouhinitiran.php
+
+require_once 'db_connect.php'; // データベース接続
+
+try {
+    // 商品データを全件取得
+    $sql = "SELECT * FROM products";
+    $stmt = $pdo->query($sql);
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo 'データベースエラー: ' . $e->getMessage();
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -41,8 +57,10 @@
             margin-bottom: 20px;
         }
         .store-logo {
-            max-height: 80px; /* ロゴの高さを調整してください */
-            margin-right: 10px; /* テキストとの間隔 */
+            max-height: 80px;
+            /* ロゴの高さを調整してください */
+            margin-right: 10px;
+            /* テキストとの間隔 */
         }
         /* 新しいスタイル */
         .home-link {
@@ -61,19 +79,21 @@
       </a>
     <div class="nav-buttons">
         <a href="kato.html">カートの中身</a>
-        <a href="{{ url_for('order_history') }}">注文履歴</a>
-        <a href="{{ url_for('account') }}">アカウント</a>
+        <a href="{{ url_for('order_history') }}">注文履歴</a> 
+        <a href="{{ url_for('account') }}">アカウント</a> 
     </div>
     
     <h1>商品一覧</h1>
     <div class="product-grid">
-        <!--{% for product in products %}-->
-        <div class="product-item">
-            <img src="{{ url_for('static', filename='images/' + product.image_path) }}" alt="{{ product.name }}" class="product-img">
-            <h3>{{ product.name }}</h3>
-            <p>{{ product.price }}円</p>
-        </div>
-        <!--{% endfor %}-->
+        <?php foreach ($products as $product): ?> 
+            <div class="product-item">
+                <img src="images/<?php echo htmlspecialchars($product['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'); ?>" class="product-img"> 
+                <h3><?php echo htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'); ?></h3> 
+                <p><?php echo htmlspecialchars($product['description'], ENT_QUOTES, 'UTF-8'); ?></p> 
+                <p><?php echo htmlspecialchars($product['price'], ENT_QUOTES, 'UTF-8'); ?>円</p> 
+                <a href="#" class="add-to-cart">カートに入れる</a> 
+            </div>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>
