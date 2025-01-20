@@ -3,17 +3,21 @@
 /* 全体的なスタイル */
 body {
   font-family: sans-serif;
-  background-color: #f4f4f4; 
-  color: #333; 
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 #container {
-  width: 80%;
-  margin: 0 auto;
+  display: flex; 
+}
+
+/* サイドバーのスタイル */
+#sidebar {
+  width: 250px; /* サイドバーの幅 */
   background-color: #fff;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  height: 100vh; /* サイドバーの高さをviewportの高さに */
+  overflow-y: auto; /* 縦方向にスクロールできるようにする */
 }
 
 h1 {
@@ -108,11 +112,16 @@ a:hover {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-  #hamburger {
-    display: block; 
+  #sidebar {
+    display: none; /* 画面幅が 768px 以下の場合はサイドバーを非表示 */
+  }
+  
+  #content {
+    margin-left: 0; /* 画面幅が 768px 以下の場合はコンテンツの左マージンを 0 に */
   }
 
   #content {
     margin-left: 0; 
+    margin-left: 260px; /* サイドバーの幅 + 余白 */
   }
 }
