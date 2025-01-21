@@ -72,7 +72,7 @@ try {
 <body>
 <a href="{{ url_for('home') }}" class="home-link">
     <h1 class="store-name">
-        <img src="path/to/logo.png" alt="にわとり文具" class="store-logo">
+        <img src="logo.png" alt="にわとり文具" class="store-logo">
     </h1>
         </h1>
         </h1>
