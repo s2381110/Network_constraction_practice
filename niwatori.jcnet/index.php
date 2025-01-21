@@ -1,5 +1,5 @@
 <?php
-// syouhinitiran.php
+// index.php
 
 require_once 'db_connect.php'; // データベース接続
 
