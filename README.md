@@ -15,7 +15,6 @@ This repository contains the website for the "Niwatori Stationery Store" created
 
 *   HTML
 *   CSS
-*   JavaScript
 *   PHP
 *   MySQL
 
