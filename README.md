@@ -15,9 +15,14 @@ This repository contains the website for the "Niwatori Stationery Store" created
 
 *   HTML
 *   CSS
+*   JavaScript
 *   PHP
 *   MySQL
 
+## URLs
+
+* User: http://niwatori.jcnet
+* Admin: http://it17.fjct.fit.ac.jp
 
 ## Note
 
