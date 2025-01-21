@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // 保存先ディレクトリ
-        $upload_dir = 'niwatori.jcnet/uploads'; 
+        $upload_dir = '/uploads'; 
         if (!file_exists($upload_dir)) {
             mkdir($upload_dir, 0755, true); 
         }
