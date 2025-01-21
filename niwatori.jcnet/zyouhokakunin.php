@@ -84,7 +84,7 @@ unset($_SESSION['user_data']);
 <body>
     <div class="confirmation">
         <h1 class="store-name">
-            <img src="path/to/logo.png" alt="にわとり文具" class="store-logo">
+            <img src="logo.png" alt="にわとり文具" class="store-logo">
 
         </h1>
         <h1>注文情報確認</h1>
