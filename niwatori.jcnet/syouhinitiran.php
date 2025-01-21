@@ -87,7 +87,7 @@ try {
     <div class="product-grid">
         <?php foreach ($products as $product): ?> 
             <div class="product-item">
-                <img src="images/<?php echo htmlspecialchars($product['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'); ?>" class="product-img"> 
+                <img src="uploads/<?php echo htmlspecialchars($product['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'); ?>" class="product-img"> 
                 <h3><?php echo htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'); ?></h3> 
                 <p><?php echo htmlspecialchars($product['description'], ENT_QUOTES, 'UTF-8'); ?></p> 
                 <p><?php echo htmlspecialchars($product['price'], ENT_QUOTES, 'UTF-8'); ?>円</p> 
